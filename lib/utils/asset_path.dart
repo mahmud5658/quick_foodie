@@ -4,5 +4,6 @@ class AssetsPath{
   static const String pizza = '$_images/pizza.png';
   static const String salad = '$_images/salad.png';
   static const String ice_cream = '$_images/ice-cream.png';
+  static const String dummyItem = '$_images/salad2.png';
 
 }
