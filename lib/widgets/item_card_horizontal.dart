@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:quick_foodie/pages/details.dart';
 import 'package:quick_foodie/widgets/widgets_support.dart';
 
-import '../pages/details.dart';
 import '../utils/asset_path.dart';
 
-class ItemCardVertical extends StatelessWidget {
-  const ItemCardVertical({
+class ItemCardHorizontal extends StatelessWidget {
+  const ItemCardHorizontal({
     super.key,
   });
 
@@ -19,10 +19,11 @@ class ItemCardVertical extends StatelessWidget {
         elevation: 10,
         child: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Column(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(AssetsPath.dummyItem,height: 150,width: 150,fit: BoxFit.cover,),
-              const SizedBox(height: 6,),
+              const SizedBox(width: 8,),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

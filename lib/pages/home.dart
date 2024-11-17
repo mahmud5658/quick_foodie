@@ -4,6 +4,7 @@ import 'package:quick_foodie/widgets/category_widget.dart';
 import 'package:quick_foodie/widgets/widgets_support.dart';
 
 import '../widgets/item_card_Vertical.dart';
+import '../widgets/item_card_horizontal.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -75,27 +76,7 @@ class _HomeState extends State<Home> {
             Expanded(child: ListView.separated(
                 scrollDirection: Axis.vertical,
                 itemBuilder: (context,index){
-                  return  Card(
-                    elevation: 10,
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Image.asset(AssetsPath.dummyItem,height: 150,width: 150,fit: BoxFit.cover,),
-                          const SizedBox(width: 8,),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Veggie Taco Hash',style: AppWidget.semiBoldTextFeildStyle(),),
-                              Text('Fresh and Healthy',style: AppWidget.lightTextFieldStyle(),),
-                              Text('250Tk.',style: AppWidget.semiBoldTextFeildStyle())
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  );
+                  return  const ItemCardHorizontal();
                 }, separatorBuilder: (_,__)=> const SizedBox(width: 10,), itemCount: 5),)
           ],
         ),
@@ -119,7 +100,7 @@ class _HomeState extends State<Home> {
         ),
         CategoryCard(
           isSelected: iceCream,
-          imagePath: AssetsPath.ice_cream,
+          imagePath: AssetsPath.iceCream,
           onTap: () {
             burger = false;
             salad = false;
@@ -154,5 +135,7 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
+
 
 
