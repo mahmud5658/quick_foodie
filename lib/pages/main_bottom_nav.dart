@@ -46,7 +46,7 @@ class _MainBottomNavState extends State<MainBottomNav> {
 
           });
         },
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
           color: Colors.black,
           items:const  [
         Icon(Icons.home_outlined,color: Colors.white,),

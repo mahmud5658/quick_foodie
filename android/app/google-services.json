@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "303712102921",
+    "project_id": "quick-foodie-22257",
+    "storage_bucket": "quick-foodie-22257.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303712102921:android:78ce44b428f03a1aa5e6d8",
+        "android_client_info": {
+          "package_name": "com.example.quick_foodie"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoIqcTJBvGrwpg5Adsmw5ZRjLjqn8T0Ds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

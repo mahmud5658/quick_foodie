@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:quick_foodie/pages/main_bottom_nav.dart';
 import 'package:quick_foodie/pages/sign_up.dart';
 import 'package:quick_foodie/utils/asset_path.dart';
 
@@ -45,7 +46,6 @@ class _SignInState extends State<SignIn> {
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30))),
-            child: const Text(''),
           ),
           Container(
             margin: const EdgeInsets.only(top: 60, left: 20, right: 20),
@@ -82,18 +82,18 @@ class _SignInState extends State<SignIn> {
                               'Sign In',
                               style: AppWidget.headLineTextFieldStyle(),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             TextFormField(
                               controller: _emailController,
-                              validator: (value) {
-                                if (value == null || value.isEmpty) {
-                                  return 'Please enter email';
-                                } else {
-                                  return null;
-                                }
-                              },
+                              // validator: (value) {
+                              //   if (value == null || value.isEmpty) {
+                              //     return 'Please enter email';
+                              //   } else {
+                              //     return null;
+                              //   }
+                              // },
                               decoration: InputDecoration(
                                 hintText: 'Email',
                                 hintStyle: AppWidget.semiBoldTextFieldStyle(),
@@ -105,13 +105,13 @@ class _SignInState extends State<SignIn> {
                             ),
                             TextFormField(
                               controller: _passwordController,
-                              validator: (value) {
-                                if (value == null || value.isEmpty) {
-                                  return 'Please enter password';
-                                } else {
-                                  return null;
-                                }
-                              },
+                              // validator: (value) {
+                              //   if (value == null || value.isEmpty) {
+                              //     return 'Please enter password';
+                              //   } else {
+                              //     return null;
+                              //   }
+                              // },
                               obscureText: true,
                               decoration: InputDecoration(
                                 hintText: 'Password',
@@ -138,12 +138,13 @@ class _SignInState extends State<SignIn> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                if (_formKey.currentState!.validate()) {
-                                  setState(() {
-                                    email = _emailController.text;
-                                    password = _passwordController.text;
-                                  });
-                                }
+                                // if (_formKey.currentState!.validate()) {
+                                //   setState(() {
+                                //     email = _emailController.text;
+                                //     password = _passwordController.text;
+                                //   });
+                                // }
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> const MainBottomNav()));
                               },
                               child: Material(
                                 elevation: 5,
