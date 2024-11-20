@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:quick_foodie/pages/forgot_password.dart';
 import 'package:quick_foodie/pages/main_bottom_nav.dart';
 import 'package:quick_foodie/pages/sign_up.dart';
 import 'package:quick_foodie/utils/asset_path.dart';
@@ -120,17 +121,22 @@ class _SignInState extends State<SignIn> {
                                 const Icon(Icons.password_outlined),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             const SizedBox(
                               height: 20,
                             ),
-                            Container(
-                              alignment: Alignment.topRight,
-                              child: Text(
-                                'Forgot Password?',
-                                style: AppWidget.semiBoldTextFieldStyle(),
+                            GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> const ForgotPassword()));
+                              },
+                              child: Container(
+                                alignment: Alignment.topRight,
+                                child: Text(
+                                  'Forgot Password?',
+                                  style: AppWidget.semiBoldTextFieldStyle(),
+                                ),
                               ),
                             ),
                             const SizedBox(

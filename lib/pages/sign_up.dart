@@ -141,16 +141,6 @@ class _SignUpState extends State<SignUp> {
                               ),
                             ),
                             const SizedBox(
-                              height: 20,
-                            ),
-                            Container(
-                              alignment: Alignment.topRight,
-                              child: Text(
-                                'Forgot Password?',
-                                style: AppWidget.semiBoldTextFieldStyle(),
-                              ),
-                            ),
-                            const SizedBox(
                               height: 60,
                             ),
                             GestureDetector(
